@@ -1,3 +1,5 @@
+#matlab code for reference
+'''
 #!/usr/bin/env python
 
 from collections import deque
@@ -57,7 +59,11 @@ while (True):
     # only proceeding if at least one contour was found
     if len(cnts) > 0:
         # finding the largest contour in the mask, then using it to compute the minimum enclosing circle and centroid
+        #print(cnts)
+        cnts.sort()
         c = max(cnts, key=cv2.contourArea)
+        c1 = cnts[-2]
+        #print(c)
         ((x, y), radius) = cv2.minEnclosingCircle(c)
         M = cv2.moments(c)
         center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
@@ -85,3 +91,4 @@ while (True):
 # When everything done, release the capture
 cap.release()
 cv2.destroyAllWindows()
+'''
