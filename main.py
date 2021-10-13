@@ -1,16 +1,19 @@
 import csv
 
-#import mpl_toolkits.mplot3d.axes3d as p3
+import mpl_toolkits.mplot3d.axes3d as p3
 import numpy as np
 from matplotlib import animation
 from matplotlib import pyplot as plt
+import time
+
+start = time.time()
 
 fig = plt.figure()
 ax = p3.Axes3D(fig, auto_add_to_figure=False)
 fig.add_axes(ax)
 
 fileName = 'FistRelax-200205-01-Mocap'
-with open('C:/Users/Jacka/Desktop/Research/3D Model/Data/CSVs/Formatted/' + fileName + '.csv') as csv_file:
+with open(fileName + '.csv') as csv_file:
     coords = csv.reader(csv_file, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)
     x_coords = []
     y_coords = []
@@ -64,6 +67,9 @@ def update_plot(num, x, y, z, points, lines, fingers):
 
     if frameNum + skipNum >= rowNum:
         frameNum = 1
+        end = time.time()
+        print(end - start)
+        exit()
 
     points.set_data(new_x, new_y)
     points.set_3d_properties(new_z, 'z')
@@ -77,6 +83,7 @@ def update_plot(num, x, y, z, points, lines, fingers):
         pointCount += 4
 
 
-ani = animation.FuncAnimation(fig, update_plot, interval=1, fargs=(x, y, z, points, lines, fingers))
+ani = animation.FuncAnimation(fig, update_plot, interval=22.8863, fargs=(x, y, z, points, lines, fingers))
 #ani.save(fileName + '.mp4', fps=1000)
 plt.show()
+
