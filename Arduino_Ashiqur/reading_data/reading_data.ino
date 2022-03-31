@@ -1,19 +1,13 @@
-int incomingByte = 0;   // for incoming serial data
+int ldr = A0;
 
-void setup() {
-        Serial.begin(9600);     // opens serial port, sets data rate to 9600 bps
+void setup(){
+    pinMode(ldr, INPUT); //initialize ldr sensor as INPUT
+    Serial.begin(9600); //begin the serial monitor at 9600 baud
 }
 
-void loop() {
-
-        // send data only when you receive data:
-        if (Serial.available() > 0) {
-                // read the incoming byte:
-                incomingByte = Serial.read();
-
-                // say what you got:
-                Serial.print("I received: ");
-                Serial.println(incomingByte, DEC);
-        }
+void loop(){
+    int data=analogRead(ldr);
+    data = (data - 300) * 1000;
+    Serial.println(data);
+    delay(100);
 }
- 
