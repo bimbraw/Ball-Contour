@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa8a1962-76bb-412a-a906-8223d5e4036c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Arduino_Ashiqur/printing_Serial_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino_Ashiqur/reading_data/reading_data.ino" beforeDir="false" afterPath="$PROJECT_DIR$/Arduino_Ashiqur/reading_data/reading_data.ino" afterDir="false" />
-    </list>
+    <list default="true" id="fa8a1962-76bb-412a-a906-8223d5e4036c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,5 +167,9 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1045" height="154" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1648674872359" />
+    <state x="625" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1649959814734">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="625" y="191" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1649959814734" />
   </component>
 </project>
